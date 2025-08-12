@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Sharing DApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Skill Sharing DApp</h1>
+        
+        <!-- List Skill Form -->
+        <section id="list-skill">
+            <h2>List a Skill</h2>
+            <form id="listSkillForm">
+                <input type="text" id="description" placeholder="Skill Description" required>
+                <input type="number" id="price" min="1" placeholder="Price (in Ether)" required>
+                <input type="datetime-local" id="expirationTime" required>
+                <input type="number" id="maxBuyers" min="1" placeholder="Max Buyers" required>
+                <button type="submit">List Skill</button>
+            </form>
+        </section>
+
+        <!-- Purchase Skill -->
+        <section id="purchase-skill">
+            <h2>Purchase a Skill</h2>
+            <form id="purchaseSkillForm">
+                <input type="number" id="skillId" min="0" placeholder="Skill ID" required>
+                <button type="submit">Purchase</button>
+            </form>
+        </section>
+
+        <!-- Rate Skill -->
+        <section id="rate-skill">
+            <h2>Rate a Skill</h2>
+            <form id="rateSkillForm">
+                <input type="number" id="rateSkillId" placeholder="Skill ID" required>
+                
+                <input type="number" id="rating" min="1" max="5" step="1" placeholder="Rate (1-5)" required>
+                <button type="submit">Rate</button>
+            </form>
+        </section>
+
+        <!-- Withdraw Earnings -->
+        <section id="withdraw-earnings">
+            <h2>Withdraw Earnings</h2>
+            <button id="withdrawEarningsButton">Withdraw</button>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>`
+</body>
+</html>

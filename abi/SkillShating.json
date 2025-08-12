@@ -1,0 +1,373 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_skillId",
+				"type": "uint256"
+			}
+		],
+		"name": "deactivateSkill",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "provider",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "FundsWithdrawn",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_description",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_price",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_expirationTime",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_maxBuyers",
+				"type": "uint256"
+			}
+		],
+		"name": "listSkill",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_skillId",
+				"type": "uint256"
+			}
+		],
+		"name": "purchaseSkill",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_skillId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_rating",
+				"type": "uint256"
+			}
+		],
+		"name": "rateSkill",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "skillId",
+				"type": "uint256"
+			}
+		],
+		"name": "SkillDeactivated",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "skillId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "provider",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "description",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "price",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "maxBuyers",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "expirationTime",
+				"type": "uint256"
+			}
+		],
+		"name": "SkillListed",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "skillId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "buyer",
+				"type": "address"
+			}
+		],
+		"name": "SkillPurchased",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "skillId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "rating",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "buyer",
+				"type": "address"
+			}
+		],
+		"name": "SkillRated",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "withdrawFunds",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "balances",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_skillId",
+				"type": "uint256"
+			}
+		],
+		"name": "getSkillDetails",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "provider",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "description",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "price",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "expirationTime",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "buyersCount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "maxBuyers",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "active",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_skillId",
+				"type": "uint256"
+			}
+		],
+		"name": "getSkillRating",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "averageRating",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "ratings",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "sum",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "count",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "skillCounter",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "skills",
+		"outputs": [
+			{
+				"internalType": "address payable",
+				"name": "provider",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "description",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "price",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "expirationTime",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "maxBuyers",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "buyersCount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "active",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
